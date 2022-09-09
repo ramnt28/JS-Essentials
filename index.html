@@ -1,0 +1,165 @@
+<body>
+  <p id="temp"></p>
+
+  <script>
+    const x = "fasdf";
+    console.log(x);
+    document.querySelector("#temp").innerHTML = x;
+    //  var, Let, Const
+    for (var i = 0; i < 10; i++) {
+      console.log("Loop");
+    }
+
+    // Ternary Operator
+    console.log("TERNARY");
+    const f = i === "r" ? console.log("Hi") : console.log("Wrong");
+
+    function ram() {
+      var x = 10;
+      console.log("Inside the function", x);
+    }
+
+    ram();
+    console.log(x);
+
+    //  Arrow Functions
+
+    const addition = () => {
+      console.log("Sambo");
+    };
+
+    addition();
+
+    // Looping and Conditional Statements
+
+    let y = "2";
+
+    if (y === 1) {
+      console.log("Working");
+    }
+
+    let z = 1;
+
+    while (z < 5) {
+      console.log("While Log");
+      z = z + 1;
+    }
+
+    //   Classes
+
+    class RichTextEditor {
+      car = "";
+
+      constructor() {
+        console.log("Constructor");
+      }
+
+      subtraction = () => {
+        console.log("Inside Method");
+        this.car = "Samurai";
+      };
+
+      callingFunctions = () => {
+        console.log("Another Method Called", this.car);
+      };
+    }
+
+    let object = new RichTextEditor();
+    object.subtraction();
+    object.callingFunctions();
+
+    // Classes Inheritence
+
+    console.log("INHERITENCE");
+
+    class Person {
+      constructor() {
+        console.log("Constructor of Parent Class");
+      }
+
+      walk() {
+        console.log("Inside Method");
+      }
+    }
+
+    class Student extends Person {
+      constructor() {
+        super();
+        console.log("Child Constructor");
+      }
+
+      learn() {
+        console.log("Inside Child Method");
+      }
+    }
+
+    student = new Student();
+
+    // Objects, Map, Filter
+
+    let students = [
+      {
+        id: 10,
+        name: "Hero",
+        class: 8,
+      },
+      {
+        id: 12,
+        name: "Shyam",
+        class: 8,
+      },
+      {
+        id: 10,
+        name: "Babu",
+        class: 8,
+      },
+    ];
+
+    console.log(students);
+
+    students.map((student, id) => {
+      console.log("Map Method", student);
+      console.log("Map Method ID", id + 1);
+    });
+
+    const filteredStudents = students.filter((student) => {
+      return student.id === 12;
+    });
+
+    tempArray = {
+      id: "1",
+      name: "fa",
+      cls: "sanb",
+    };
+
+    const destructure = (filteredStudents) => {
+      const { id, name, cls: standard } = filteredStudents;
+      console.log("ID", id);
+      console.log("Name", name);
+      console.log("Class", standard);
+    };
+
+    destructure(tempArray);
+
+    console.log(filteredStudents);
+
+    // Spread Operator with Objects & Arrays
+
+    const first = {
+      name: "ff",
+    };
+
+    const second = {
+      place: "fasdf",
+    };
+
+    const combined = { ...first, ...second, location: "fasdfasd" };
+    console.log("Object De-Structure", combined);
+
+    const third = [1, 2, 3];
+    const fourth = [4, 5, 6];
+
+    const five = [...third, ...fourth, 5, 6];
+    console.log("Array Spread Operator", five);
+  </script>
+</body>
